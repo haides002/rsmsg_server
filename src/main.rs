@@ -47,7 +47,7 @@ fn main() {
 
                 stream.write_all(b"HTTP/1.1 200 OK\r\n\r\n").unwrap();
 
-                append_to_file(FILENAME, &format!("{}\n{}\n", SEPERATOR, exclude_first[1]));
+                append_to_file(FILENAME, &format!("{}\n{}\n", exclude_first[1], SEPERATOR));
             } else if exclude_first[0].contains(&"GET / HTTP/1.1".to_string()) {
                 print!(">_< incomming get >_<\n");
 
